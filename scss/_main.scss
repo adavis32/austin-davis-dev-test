@@ -1,0 +1,33 @@
+$main-color: #1EFFFF;
+$circle-grad: -webkit-linear-gradient(left, rgba(255,102,228,1) 0%,rgba(30,255,255,1) 100%);
+$circle-content-grad: -webkit-linear-gradient(left, rgba(30,255,255,1) 0%,rgba(255,102,228,1) 100%);
+
+body {
+    background: $circle-grad;
+}
+
+#circle {
+    width: 100vw;
+    background: $circle-grad;
+    transition: all 1.5s;
+    @media screen and (max-width: 375px) {
+        height: 100vh;
+    }
+}
+
+#circle-content {
+    margin: 0 auto;
+    width: 60vw;
+    padding-bottom: 60%;
+    border-radius: 50%;
+    border: 1px solid darken($main-color, 10%);
+    background: $circle-content-grad;
+    @media only screen and (max-width: 375px) {
+        margin-left: -50%;
+        width: 100vw;
+        padding-bottom: 100%;
+        position: absolute;
+        top: 50vw;
+        left: 50%;
+    }
+}
